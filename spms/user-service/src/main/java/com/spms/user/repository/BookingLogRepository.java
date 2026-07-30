@@ -1,0 +1,10 @@
+package com.spms.user.repository;
+
+import com.spms.user.model.BookingLog;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface BookingLogRepository extends JpaRepository<BookingLog, Long> {
+    List<BookingLog> findByUserIdOrderByTimestampDesc(Long userId);
+}
