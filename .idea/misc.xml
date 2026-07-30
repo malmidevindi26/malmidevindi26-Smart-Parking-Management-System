@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/spms/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/spms/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spms/api-gateway/pom.xml" />
       </list>
     </option>
   </component>
