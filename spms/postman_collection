@@ -1,0 +1,897 @@
+{
+  "info": {
+    "_postman_id": "58450ced-cd17-4b8f-bbaa-49d718dbd9e7",
+    "name": "SPMS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49876910",
+    "_collection_link": "https://go.postman.co/collection/49876910-58450ced-cd17-4b8f-bbaa-49d718dbd9e7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "User Service",
+      "item": [
+        {
+          "name": "register user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fullName\": \"Kasun De Silve\",\r\n  \"email\": \"kasunM@example.com\",\r\n  \"password\": \"owner1234\",\r\n  \"phone\": \"0719896543\",\r\n  \"role\": \"OWNER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/users/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"malmi@example.com\",\r\n  \"password\": \"pass123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update user",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \r\n  \"phone\": \"0779999999\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/users/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update user - success",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fullName\": \"Malmi Devindi\",\r\n  \"email\": \"malmi@example.com\",\r\n  \"password\": \"pass123\",\r\n  \"phone\": \"0779999999\",\r\n  \"role\": \"DRIVER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/users/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get user by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "post-history",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"description\": \"Reserved parking space #3 in Colombo\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/users/1/history",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "1",
+                "history"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get history",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users/1/history",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "1",
+                "history"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete user",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vehicle Service",
+      "item": [
+        {
+          "name": "create vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"plateNumber\": \"CAB-1234\",\r\n  \"type\": \"CAR\",\r\n  \"ownerUserId\": 1\r\n}   ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"plateNumber\": \"CAR-0417\",\r\n  \"make\": \"Honda\",\r\n  \"model\": \"Vezel\",\r\n  \"color\": \"Green\",\r\n  \"userId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get vehicles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get vehicle by vehicle-id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get vehicle by userId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles/user/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles",
+                "user",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "put",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"plateNumber\": \"CAB-5678\",\r\n  \"make\": \"Honda\",\r\n  \"model\": \"Vezel\",\r\n  \"color\": \"Black\",\r\n  \"userId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete vehicle",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Entry",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles/2/entry",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles",
+                "2",
+                "entry"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Exit",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles/3/exit",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles",
+                "3",
+                "exit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Tracking",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/vehicles/2/tracking",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "vehicles",
+                "2",
+                "tracking"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Parking Space Service",
+      "item": [
+        {
+          "name": "post-parking",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"spaceCode\": \"COL-B-002\",\r\n  \"city\": \"Colombo\",\r\n  \"zone\": \"Zone C\",\r\n  \"ownerId\": 2,\r\n  \"hourlyRate\": 200.0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/parking",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List spaces",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/parking?city=Colombo&zone=Zone A&availableOnly=true",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "Colombo"
+                },
+                {
+                  "key": "zone",
+                  "value": "Zone A"
+                },
+                {
+                  "key": "availableOnly",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get space by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/parking/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List spaces owned by an owner",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/parking/owner/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking",
+                "owner",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "put",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"spaceCode\": \"COL-A-001\",\r\n  \"city\": \"Colombo\",\r\n  \"zone\": \"Zone A\",\r\n  \"ownerId\": 2,\r\n  \"hourlyRate\": 180.0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/parking/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/parking/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reserve an available space",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 2,\r\n  \"vehicleId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/parking/1/reserve",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking",
+                "1",
+                "reserve"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "manual status update",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"OCCUPIED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/parking/4/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking",
+                "4",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "manual status update",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"OCCUPIED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/parking/3/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "parking",
+                "3",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment Service",
+      "item": [
+        {
+          "name": "post -success case",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 2,\r\n  \"parkingSpaceId\": 1,\r\n  \"vehicleId\": 1,\r\n  \"amount\": 450.0,\r\n  \"cardNumber\": \"4111111111111112\",\r\n  \"expiryDate\": \"12/28\",\r\n  \"cvv\": \"123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/payments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "post-failure case",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 2,\r\n  \"parkingSpaceId\": 1,\r\n  \"vehicleId\": 1,\r\n  \"amount\": 450.0,\r\n  \"cardNumber\": \"1234\",\r\n  \"expiryDate\": \"12/28\",\r\n  \"cvv\": \"123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/payments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get payments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/payments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get payment by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/payments/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "payments",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get payment by user id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/payments/user/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "payments",
+                "user",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get receipt",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/payments/receipt/RCPT-EF961662",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "payments",
+                "receipt",
+                "RCPT-EF961662"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
